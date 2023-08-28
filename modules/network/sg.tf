@@ -1,6 +1,6 @@
 ##### Security Group for EC2 and ALB instances #####
 resource "aws_security_group" "allow_tls" {
-  name        = "CoalFire_allow_tls"
+  name        = "CF_allow_tls"
   description = "Allow TLS inbound traffic"
   vpc_id      = aws_vpc.cf_vpc.id
 
