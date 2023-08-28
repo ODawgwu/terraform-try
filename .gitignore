@@ -1,0 +1,9 @@
+# Ignore Terraform files/folder
+*.tfstate
+*.tfstate.backup
+*.tfstate.backup.*
+*.tfstate.lock.info
+.terraform/
+.terraform.lock.hcl
+terraform*
+*.log
