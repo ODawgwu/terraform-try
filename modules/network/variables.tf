@@ -2,16 +2,6 @@ variable "cidr_block" {
   description = "vpc cidr range"
 }
 
-# variable "tags" {
-#   description = "vpc cidr range"
-# }
-
-# variable "azs" {
-#   description = "A list of availability zones names or ids in the region"
-#   type        = list(string)
-#   default     = []
-# }
-
 variable "azs" {
   description = "A list of availability zones names or ids in the region"
   type        = list(string)
@@ -34,8 +24,6 @@ variable "private_subnet_cidr" {
 # }
 
 variable "tags" {}
-
-# variable "ami" {}
 
 variable "instance_type" {}
 

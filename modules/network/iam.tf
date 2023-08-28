@@ -27,26 +27,6 @@ resource "aws_iam_role" "role" {
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
 
-# ##### Custom policy statement #####
-# data "aws_iam_policy_document" "policy" {
-#   statement {
-#     effect    = "Allow"
-#     actions   = ["s3:GetObject*"]
-#     resources = ["*"]
-#   }
-# }
-
-# resource "aws_iam_policy" "policy" {
-#   name        = "cf-policy"
-#   description = "Policy for cf server"
-#   policy      = data.aws_iam_policy_document.policy.json
-# }
-
-# resource "aws_iam_role_policy_attachment" "cf_policy_attach" {
-#   role       = aws_iam_role.role.name
-#   policy_arn = aws_iam_policy.policy.arn
-# }
-
 resource "aws_iam_role_policy_attachment" "ssm_policy" {
   role       = aws_iam_role.role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMFullAccess"
